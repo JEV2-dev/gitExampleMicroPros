@@ -1,0 +1,114 @@
+{
+  "input": "/home/jaime/Descargas/calibration.csv",
+  "outdir": "/home/jaime/Descargas/salida_calibracion",
+  "figures": {
+    "voltage_vs_raw": {
+      "all_models": {
+        "linear": {
+          "coeffs": [
+            0.8651092267983527,
+            -29.01369247926476
+          ],
+          "r2": 0.985251880446552,
+          "adj_r2": 0.9847761346545053
+        },
+        "quadratic": {
+          "coeffs": [
+            -9.808797643961136e-05,
+            1.2748650440469096,
+            -368.91884093418605
+          ],
+          "r2": 0.9953444148431856,
+          "adj_r2": 0.995034042499398,
+          "kind": "quadratic",
+          "equation": "Voltage (V) = -0.000098*Raw^2 + 1.274865*Raw + -368.918841",
+          "plot_path": "/home/jaime/Descargas/salida_calibracion/voltage_vs_raw_quadratic.png"
+        }
+      },
+      "best": {
+        "coeffs": [
+          -9.808797643961136e-05,
+          1.2748650440469096,
+          -368.91884093418605
+        ],
+        "r2": 0.9953444148431856,
+        "adj_r2": 0.995034042499398,
+        "kind": "quadratic",
+        "equation": "Voltage (V) = -0.000098*Raw^2 + 1.274865*Raw + -368.918841",
+        "plot_path": "/home/jaime/Descargas/salida_calibracion/voltage_vs_raw_quadratic.png"
+      }
+    },
+    "water_vs_voltage": {
+      "all_models": {
+        "linear": {
+          "coeffs": [
+            0.03507630635300389,
+            -21.970498825153776
+          ],
+          "r2": 0.8305942943287346,
+          "adj_r2": 0.8251295941457906
+        },
+        "quadratic": {
+          "coeffs": [
+            1.1490468340163827e-05,
+            -0.0030837850725715958,
+            1.0619498674302017
+          ],
+          "r2": 0.8765113526616339,
+          "adj_r2": 0.8682787761724096,
+          "kind": "quadratic",
+          "equation": "Water % = 0.000011*Voltage (V)^2 + -0.003084*Voltage (V) + 1.061950",
+          "plot_path": "/home/jaime/Descargas/salida_calibracion/water_vs_voltage_quadratic.png"
+        }
+      },
+      "best": {
+        "coeffs": [
+          1.1490468340163827e-05,
+          -0.0030837850725715958,
+          1.0619498674302017
+        ],
+        "r2": 0.8765113526616339,
+        "adj_r2": 0.8682787761724096,
+        "kind": "quadratic",
+        "equation": "Water % = 0.000011*Voltage (V)^2 + -0.003084*Voltage (V) + 1.061950",
+        "plot_path": "/home/jaime/Descargas/salida_calibracion/water_vs_voltage_quadratic.png"
+      }
+    },
+    "sand_vs_voltage": {
+      "all_models": {
+        "linear": {
+          "coeffs": [
+            -0.035076306353003885,
+            121.9704988251537
+          ],
+          "r2": 0.8305942943287346,
+          "adj_r2": 0.8251295941457906
+        },
+        "quadratic": {
+          "coeffs": [
+            -1.1490468340163872e-05,
+            0.0030837850725717003,
+            98.93805013256971
+          ],
+          "r2": 0.8765113526616338,
+          "adj_r2": 0.8682787761724094,
+          "kind": "quadratic",
+          "equation": "Sand % = -0.000011*Voltage (V)^2 + 0.003084*Voltage (V) + 98.938050",
+          "plot_path": "/home/jaime/Descargas/salida_calibracion/sand_vs_voltage_quadratic.png"
+        }
+      },
+      "best": {
+        "coeffs": [
+          -1.1490468340163872e-05,
+          0.0030837850725717003,
+          98.93805013256971
+        ],
+        "r2": 0.8765113526616338,
+        "adj_r2": 0.8682787761724094,
+        "kind": "quadratic",
+        "equation": "Sand % = -0.000011*Voltage (V)^2 + 0.003084*Voltage (V) + 98.938050",
+        "plot_path": "/home/jaime/Descargas/salida_calibracion/sand_vs_voltage_quadratic.png"
+      }
+    }
+  }
+}

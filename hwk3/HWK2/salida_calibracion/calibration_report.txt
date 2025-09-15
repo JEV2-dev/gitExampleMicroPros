@@ -1,0 +1,20 @@
+Calibration Analysis Report
+Input CSV: /home/jaime/Descargas/calibration.csv
+
+--- voltage_vs_raw ---
+Best model: quadratic
+Equation: Voltage (V) = -0.000098*Raw^2 + 1.274865*Raw + -368.918841
+Adjusted R^2: 0.995034
+Plot: /home/jaime/Descargas/salida_calibracion/voltage_vs_raw_quadratic.png
+
+--- water_vs_voltage ---
+Best model: quadratic
+Equation: Water % = 0.000011*Voltage (V)^2 + -0.003084*Voltage (V) + 1.061950
+Adjusted R^2: 0.868279
+Plot: /home/jaime/Descargas/salida_calibracion/water_vs_voltage_quadratic.png
+
+--- sand_vs_voltage ---
+Best model: quadratic
+Equation: Sand % = -0.000011*Voltage (V)^2 + 0.003084*Voltage (V) + 98.938050
+Adjusted R^2: 0.868279
+Plot: /home/jaime/Descargas/salida_calibracion/sand_vs_voltage_quadratic.png

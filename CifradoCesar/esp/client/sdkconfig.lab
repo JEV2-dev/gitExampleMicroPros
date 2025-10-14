@@ -1,0 +1,14 @@
+# --- Wi-Fi (laboratorio/oficina)
+CONFIG_WIFI_SSID="TuSSID_LAB"
+CONFIG_WIFI_PASSWORD="TuPass_LAB"
+
+# --- TCP destino (PC del lab)
+CONFIG_TCP_SERVER_IP="10.0.0.50"
+CONFIG_TCP_SERVER_PORT=3333
+
+# --- Cifrado César
+CONFIG_CAESAR_SHIFT=5
+CONFIG_CAESAR_TEXT="Prueba Lab 001"
+
+# (Opcional) Puerto serie por defecto
+CONFIG_ESPTOOLPY_PORT="/dev/ttyUSB0"

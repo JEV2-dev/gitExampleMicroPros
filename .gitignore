@@ -1,0 +1,14 @@
+# Builds y temporales
+**/build/
+**/.vscode/
+*.o
+*.a
+*.elf
+*.bin
+*.map
+*.log
+sdkconfig.old
+*.pcap
+*.pcapng
+.DS_Store
+Thumbs.db

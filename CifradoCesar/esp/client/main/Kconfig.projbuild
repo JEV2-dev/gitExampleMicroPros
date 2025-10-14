@@ -1,0 +1,29 @@
+menu "App Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default "TP-Link_68CC"
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default "36415892"
+
+config TCP_SERVER_IP
+    string "TCP server IP"
+    default "192.168.0.109"
+
+config TCP_SERVER_PORT
+    int "TCP server port"
+    range 1 65535
+    default 3333
+
+config CAESAR_SHIFT
+    int "Caesar shift (0-25)"
+    range 0 25
+    default 4
+
+config CAESAR_TEXT
+    string "Caesar plaintext"
+    default "Jaime_123"
+
+endmenu

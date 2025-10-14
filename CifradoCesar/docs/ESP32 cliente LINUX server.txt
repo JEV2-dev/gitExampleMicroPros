@@ -1,0 +1,29 @@
+--ESP32 cliente / LINUX server--
+. $HOME/esp/esp-idf/export.sh
+cd ~/Documentos/CifradoCesar/esp/client
+idf.py set-target esp32
+idf.py menuconfig
+idf.py build
+idf.py -p /dev/ttyUSB0 flash monitor
+
+
+--LINUX cliente / ESP32 server--
+. $HOME/esp/esp-idf/export.sh
+cd ~/Documentos/CifradoCesar/esp/server
+idf.py set-target esp32
+idf.py build
+idf.py -p /dev/ttyUSB0 flash monitor
+--Terminal LINUX--
+cd ~/Documentos/CifradoCesar/linux/build
+./client <IP_DEL_ESP> 3333 4 Bren_123
+
+--WIRESHARK--
+tcp.port == 3333
+
+--IP ADDRES--
+hostname -I
+
+--PYTHON WIRESHARK--
+cd ~/Documentos/CifradoCesar/python
+sudo python3 sniff_caesar.py wlo1 3333
+

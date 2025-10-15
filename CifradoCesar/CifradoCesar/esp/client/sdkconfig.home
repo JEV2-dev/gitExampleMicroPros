@@ -1,0 +1,14 @@
+# --- Wi-Fi (casa)
+CONFIG_WIFI_SSID="TuSSID_CASA"
+CONFIG_WIFI_PASSWORD="TuPass_CASA"
+
+# --- TCP destino (tu PC en casa)
+CONFIG_TCP_SERVER_IP="10.91.121.137"
+CONFIG_TCP_SERVER_PORT=3333
+
+# --- Cifrado César
+CONFIG_CAESAR_SHIFT=4
+CONFIG_CAESAR_TEXT="Bren 123"
+
+# (Opcional) Puerto serie por defecto
+CONFIG_ESPTOOLPY_PORT="/dev/ttyUSB0"

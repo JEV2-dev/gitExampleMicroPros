@@ -1,0 +1,29 @@
+menu "App Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default "S25 Ultra de Carlos"
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default "carlos21"
+
+config TCP_SERVER_IP
+    string "TCP server IP"
+    default "10.91.121.104"
+
+config TCP_SERVER_PORT
+    int "TCP server port"
+    range 1 65535
+    default 3333
+
+config CAESAR_SHIFT
+    int "Caesar shift (0-25)"
+    range 0 25
+    default 4
+
+config CAESAR_TEXT
+    string "Caesar plaintext"
+    default "Jaime_123"
+
+endmenu

@@ -1,0 +1,504 @@
+Command: /home/jaime/.espressif/python_env/idf6.0_py3.12_env/bin/python /home/jaime/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/jaime/Documentos/MQTTv5ESP32/mqtt5/build/mqtt5.elf /home/jaime/Documentos/MQTTv5ESP32/mqtt5/build/bootloader/bootloader.elf -m '/home/jaime/.espressif/python_env/idf6.0_py3.12_env/bin/python' '/home/jaime/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.0-dev-2873-g51d5e8fd08 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 01:31:37[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=36d04h (224516) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=00046d2c vaddr=3ffb0000 size=041a4h ( 16804) load[0m
+[0;32mI (176) esp_image: segment 2: paddr=0004aed8 vaddr=40080000 size=05140h ( 20800) load[0m
+[0;32mI (185) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=9e220h (647712) map[0m
+[0;32mI (416) esp_image: segment 4: paddr=000ee248 vaddr=40085140 size=12c0ch ( 76812) load[0m
+[0;32mI (448) esp_image: segment 5: paddr=00100e5c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (460) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (460) boot: Disabling RNG early entropy source...[0m
+[0;32mI (470) cpu_start: Multicore app[0m
+[0;32mI (479) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (479) cpu_start: Pro cpu start user code[0m
+[0;32mI (479) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (484) app_init: Application information:[0m
+[0;32mI (488) app_init: Project name:     mqtt5[0m
+[0;32mI (493) app_init: App version:      1[0m
+[0;32mI (497) app_init: Compile time:     Oct 25 2025 01:31:43[0m
+[0;32mI (503) app_init: ELF file SHA256:  b4f29a450...[0m
+[0;32mI (509) app_init: ESP-IDF:          v6.0-dev-2873-g51d5e8fd08[0m
+[0;32mI (515) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (520) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (525) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (530) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (537) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (543) heap_init: At 3FFB8AF0 len 00027510 (157 KiB): DRAM[0m
+[0;32mI (549) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (556) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (562) heap_init: At 40097D4C len 000082B4 (32 KiB): IRAM[0m
+[0;32mI (570) spi_flash: detected chip: generic[0m
+[0;32mI (573) spi_flash: flash io: dio[0m
+[0;33mW (577) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (591) main_task: Started on CPU0[0m
+[0;32mI (601) main_task: Calling app_main()[0m
+[0;32mI (631) wifi:wifi driver task: 3ffc0ac0, prio:23, stack:6656, core=0[0m
+[0;32mI (641) wifi:wifi firmware version: 62a31eb[0m
+[0;32mI (641) wifi:wifi certification version: v7.0[0m
+[0;32mI (641) wifi:config NVS flash: enabled[0m
+[0;32mI (641) wifi:config nano formatting: disabled[0m
+[0;32mI (651) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (651) wifi:Init management short buffer num: 32[0m
+[0;32mI (661) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (661) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (671) wifi:Init static rx buffer num: 10[0m
+[0;32mI (671) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (681) wifi_init: rx ba win: 6[0m
+[0;32mI (681) wifi_init: accept mbox: 6[0m
+[0;32mI (681) wifi_init: tcpip mbox: 32[0m
+[0;32mI (691) wifi_init: udp mbox: 6[0m
+[0;32mI (691) wifi_init: tcp mbox: 6[0m
+[0;32mI (691) wifi_init: tcp tx win: 5760[0m
+[0;32mI (701) wifi_init: tcp rx win: 5760[0m
+[0;32mI (701) wifi_init: tcp mss: 1440[0m
+[0;32mI (711) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (711) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (721) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (721) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (821) wifi:mode : sta (b0:a7:32:30:2c:ec)[0m
+[0;32mI (821) wifi:enable tsf[0m
+[0;32mI (821) MQTT_APP: Conectando a la red Wi-Fi: TP-Link_68CC ...[0m
+[0;32mI (831) wifi:new:<9,2>, old:<1,0>, ap:<255,255>, sta:<9,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (831) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (841) main_task: Returned from app_main()[0m
+[0;32mI (931) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (941) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1111) wifi:connected with TP-Link_68CC, aid = 9, channel 9, 40D, bssid = b4:b0:24:73:68:cc[0m
+[0;32mI (1111) wifi:security: WPA2-PSK, phy: bgn, rssi: -34[0m
+[0;32mI (1111) wifi:pm start, type: 1[0m
+
+[0;32mI (1111) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1131) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1161) wifi:<ba-add>idx:0 (ifx:0, b4:b0:24:73:68:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2671) esp_netif_handlers: sta ip: 192.168.0.115, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (3241) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (4221) MQTT_APP: ✅ Conectado a Adafruit IO (MQTT 3.1.1)[0m
+[0;32mI (4231) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (4231) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (9231) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (9241) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (14241) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (14251) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (19251) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (19261) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (24261) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (24271) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (29271) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (29281) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (34281) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (34291) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (39291) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (39301) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (44301) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (44311) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (49311) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (49321) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (54321) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (54331) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (59331) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (59341) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (64341) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (64351) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (69351) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (69361) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (74361) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (74371) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (79371) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (79381) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (84381) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (84391) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (89391) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (89401) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (94401) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (94411) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (99411) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (99421) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (104421) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (104431) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (109431) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (109441) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (114441) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (114451) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (119451) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (119461) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (124461) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (124471) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (129471) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (129481) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (134481) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (134491) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (139491) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (139501) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (144501) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (144511) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (149511) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (149521) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (154521) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (154531) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (159531) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (159541) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (164541) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (164551) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (169551) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (169561) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (174561) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (174571) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (179571) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (179581) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (184581) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (184591) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (189591) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (189591) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (194601) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (194611) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (199611) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (199621) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (204621) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (204631) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (209631) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (209641) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (214641) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (214651) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (219651) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (219661) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (224661) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (224671) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (229671) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (229681) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (234681) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (234691) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (239691) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (239701) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (244701) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (244711) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (249711) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (249721) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (254721) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (254731) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (259731) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (259741) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (264741) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (264751) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (269751) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (269761) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (274761) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (274771) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (279771) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (279781) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (284781) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (284791) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (289791) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (289801) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (294801) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (294811) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (299811) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (299821) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (304821) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (304831) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (309831) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (309841) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (314841) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (314851) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (319851) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (319861) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (324861) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (324871) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (329871) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (329881) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (334881) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (334891) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (339891) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (339901) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (344901) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (344911) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (349911) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (349921) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (354921) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (354931) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (359931) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (359941) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (364941) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (364951) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (369951) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (369961) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (374961) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (374971) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (379971) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (379981) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (384981) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (384991) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (389991) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (390001) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (395001) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (395011) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (400011) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (400021) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (405021) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (405031) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (410031) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (410041) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (415041) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (415051) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (420051) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (420061) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (425061) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (425071) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (430071) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (430081) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (435081) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (435091) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (440091) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (440101) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (445101) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (445111) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (450111) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (450121) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (455121) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (455131) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (460131) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (460141) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (465141) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (465151) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (470151) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (470161) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (475161) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (475171) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (480171) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (480181) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (485181) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (485191) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (490191) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (490201) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (495201) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (495211) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (500211) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (500221) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (505221) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (505231) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (510231) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (510241) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (515241) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (515251) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (520251) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (520261) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (525261) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (525271) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (530271) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (530281) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (535281) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (535291) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (540291) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (540301) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (545301) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (545311) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (550311) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (550321) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (555321) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (555331) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (560331) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (560341) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (565341) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (565351) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (570351) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (570361) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (575361) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (575371) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (580371) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (580381) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (585381) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (585391) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (590391) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (590401) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (595401) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (595411) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (600411) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (600421) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (605421) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (605431) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (610431) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (610441) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (615441) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (615451) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (620451) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (620461) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (625461) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (625471) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (630471) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (630481) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (635481) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (635491) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (640491) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (640501) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (645501) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (645511) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (650511) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (650521) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (655521) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (655531) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (660531) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (660541) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (665541) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (665551) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (670551) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (670561) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (675561) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (675571) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (680571) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (680581) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (685581) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (685591) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (690591) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (690601) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (695601) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (695611) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (700611) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (700621) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (705621) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (705631) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (710631) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (710641) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (715641) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (715651) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (720651) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (720661) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (725661) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (725671) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (730671) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (730681) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (735681) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (735691) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (740691) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (740701) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (745701) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (745711) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (750711) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (750721) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (755721) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (755731) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (760731) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (760741) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (765741) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (765751) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (770751) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (770761) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (775761) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (775771) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (780771) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (780781) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (785781) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (785791) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (790791) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (790801) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (795801) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (795811) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (800811) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (800821) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (805821) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (805831) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (810831) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (810841) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (815841) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (815851) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (820851) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (820861) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (825861) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (825871) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (830871) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (830881) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (835881) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (835891) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (840891) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (840901) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (845901) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (845911) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (850911) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (850921) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (855921) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (855931) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (860931) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (860941) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (865941) MQTT_APP: 🌡️ Publicando temperatura: 29.30 °C[0m
+[0;32mI (865951) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (870951) MQTT_APP: 🌡️ Publicando temperatura: 29.40 °C[0m
+[0;32mI (870961) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (875961) MQTT_APP: 🌡️ Publicando temperatura: 29.50 °C[0m
+[0;32mI (875971) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (880971) MQTT_APP: 🌡️ Publicando temperatura: 29.60 °C[0m
+[0;32mI (880981) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (885981) MQTT_APP: 🌡️ Publicando temperatura: 29.70 °C[0m
+[0;32mI (885991) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (890991) MQTT_APP: 🌡️ Publicando temperatura: 29.80 °C[0m
+[0;32mI (891001) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (896001) MQTT_APP: 🌡️ Publicando temperatura: 29.90 °C[0m
+[0;32mI (896011) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (901011) MQTT_APP: 🌡️ Publicando temperatura: 27.00 °C[0m
+[0;32mI (901021) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (906021) MQTT_APP: 🌡️ Publicando temperatura: 27.10 °C[0m
+[0;32mI (906031) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (911031) MQTT_APP: 🌡️ Publicando temperatura: 27.20 °C[0m
+[0;32mI (911041) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (916041) MQTT_APP: 🌡️ Publicando temperatura: 27.30 °C[0m
+[0;32mI (916051) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (921051) MQTT_APP: 🌡️ Publicando temperatura: 27.40 °C[0m
+[0;32mI (921061) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (926061) MQTT_APP: 🌡️ Publicando temperatura: 27.50 °C[0m
+[0;32mI (926071) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (931071) MQTT_APP: 🌡️ Publicando temperatura: 27.60 °C[0m
+[0;32mI (931081) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (936081) MQTT_APP: 🌡️ Publicando temperatura: 27.70 °C[0m
+[0;32mI (936091) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (941091) MQTT_APP: 🌡️ Publicando temperatura: 27.80 °C[0m
+[0;32mI (941101) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (946101) MQTT_APP: 🌡️ Publicando temperatura: 27.90 °C[0m
+[0;32mI (946111) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (951111) MQTT_APP: 🌡️ Publicando temperatura: 28.00 °C[0m
+[0;32mI (951121) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (956121) MQTT_APP: 🌡️ Publicando temperatura: 28.10 °C[0m
+[0;32mI (956131) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (961131) MQTT_APP: 🌡️ Publicando temperatura: 28.20 °C[0m
+[0;32mI (961141) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (966141) MQTT_APP: 🌡️ Publicando temperatura: 28.30 °C[0m
+[0;32mI (966151) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (971151) MQTT_APP: 🌡️ Publicando temperatura: 28.40 °C[0m
+[0;32mI (971161) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (976161) MQTT_APP: 🌡️ Publicando temperatura: 28.50 °C[0m
+[0;32mI (976161) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (981161) MQTT_APP: 🌡️ Publicando temperatura: 28.60 °C[0m
+[0;32mI (981171) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m
+[0;32mI (986171) MQTT_APP: 🌡️ Publicando temperatura: 28.70 °C[0m
+[0;32mI (986181) MQTT_APP: 📍 Publicando GPS: 20.6802,-103.3755[0m
+[0;32mI (991181) MQTT_APP: 🌡️ Publicando temperatura: 28.80 °C[0m
+[0;32mI (991191) MQTT_APP: 📍 Publicando GPS: 20.6840,-103.3801[0m
+[0;32mI (996191) MQTT_APP: 🌡️ Publicando temperatura: 28.90 °C[0m
+[0;32mI (996201) MQTT_APP: 📍 Publicando GPS: 20.6736,-103.3440[0m
+[0;32mI (1001201) MQTT_APP: 🌡️ Publicando temperatura: 29.00 °C[0m
+[0;32mI (1001211) MQTT_APP: 📍 Publicando GPS: 20.6748,-103.3525[0m
+[0;32mI (1006211) MQTT_APP: 🌡️ Publicando temperatura: 29.10 °C[0m
+[0;32mI (1006221) MQTT_APP: 📍 Publicando GPS: 20.6761,-103.3612[0m
+[0;32mI (1011221) MQTT_APP: 🌡️ Publicando temperatura: 29.20 °C[0m
+[0;32mI (1011231) MQTT_APP: 📍 Publicando GPS: 20.6774,-103.3689[0m

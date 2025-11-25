@@ -1,0 +1,2 @@
+source /home/jaime/Documentos/GitHub/pwm_freertos_project/build/bootloader/gdbinit/symbols
+source /home/jaime/Documentos/GitHub/pwm_freertos_project/build/bootloader/gdbinit/connect
